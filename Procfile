@@ -1,1 +1,1 @@
-web: gunicorn EnqilaabFarhangi.wsgi --log-file -
+web: python manage.py migrate && python manage.py collectstatic --no-input && gunicorn EnqilaabFarhangi.wsgi --log-file -
